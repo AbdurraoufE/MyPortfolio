@@ -207,17 +207,18 @@
 
         .resume-image, .linkedin-image, .email-image, .github-image {
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 20px;
             flex: 1;
         }
 
         .resume-image img, .linkedin-image img, .email-image img, .github-image img {
-            max-width: 100px;
+            width: 150px;
+            height: auto !important;
             margin-bottom: 10px;
         }
 
         .resume-image, .linkedin-image, .email-image {
-        margin-right: 20px; 
+        margin-right: 60px; 
         }
 
         .resume-image button, .linkedin-image button, .email-image button, .github-image button {
@@ -283,6 +284,31 @@
                 margin-bottom: 10px;
             }          
         }
+
+        #snake-game {
+            text-align: center;
+            background-color: #007bff;
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        #game-board {
+            display: grid;
+            gap: 2px;
+            grid-template-columns: repeat(10, 30px);
+            margin-top: 20px;
+        }
+
+        .cell {
+            width: 30px;
+            height: 30px;
+            border: 1px solid #ccc;
+            background-color: #fff;
+        }
+
+        .cell.snake {
+            background-color: #4CAF50;
+        }
     </style>
 
 <script src="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.js"></script>
@@ -329,13 +355,49 @@
             //embeded.innerHTML = '<embed src="resume.pdf" width="800px" height="1000px" />';
 
             // Option 2:
-            
+
             // get the PDF name
-            var pdfName = 'resume.pdf';
+            let pdfName = 'resume.pdf';
             
             // opens PDF in new window
             window.open(pdfName, '_blank');
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const board = document.getElementById("game-board");
+            const size = 10;
+            const cells = [];
+
+            // the board game
+            for (let row = 0; row < size; row++) {
+                for (let col = 0; col < size; col++) {
+                    const cell = document.createElement('div');
+                    cell.classList.add('cell');
+                    cells.push(cell);
+                    board.appendChild(cell);
+                }
+            }
+
+            // the snake
+            let snake = [55];
+
+            // add the snake to the board
+            function addSnake() {
+                cells.forEach((cell, index) => {
+                    cell.classList.remove('snake');
+                    if (snake.includes(index)){
+                        cell.classList.add('snake');
+                    }
+                });
+            }
+
+            // start the game
+            function startGame(){
+                addSnake();
+            }
+
+            startGame();
+        });
     </script>
 
 </head>
@@ -517,6 +579,11 @@
 
     <!-- Scroll to the top button -->
     <button id="scroll-to-the-top" onclick="ScrollToTop()">^ Top</button>
+    
+    <section id="snake-game">
+        <h2>Snake Game</h2>
+        <div id="game-board"></div>
+    </section>
 
     <footer>
         &copy; 2024 <a class="footer-text" href="https://www.linkedin.com/in/abdurraouf/>">Abdurraouf Etagiuri</a>
