@@ -103,6 +103,30 @@
             margin-bottom: 50px;
         }
 
+        #projects{
+            background-color: rgb(152,152,152);
+            padding: 20px;
+        }
+
+        .project1 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .project1 img {
+            max-width: 100%; /* Adjust as needed */
+            border-radius: 10px;
+            margin-bottom: 10px;
+        }
+        
+        .project1-item {
+            max-width: 100%;
+            text-align: center;
+            margin-top: 10px;
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -124,6 +148,18 @@
             nav a{
                 margin: 5px 0;
             }
+            .project1 {
+                flex-direction: column;
+            }
+
+            .project1 img {
+                /* max-width: 100%; */
+                margin-bottom: 10px;
+            }
+
+            /* .project1-item {
+                max-width: 100%;
+            } */
         }
     </style>
 
@@ -169,16 +205,20 @@
     <section></section>
     <section></section>
 
-    <section id="portfolio">
+    <section id="projects">
         <h2>Projects</h2>
         <section></section>
-        <div class="portfolio-item">
-            <img src="project1.jpg" alt="Project 1">
-            <h3>Project 1</h3>
-            <p>Description of Project 1.</p>
+
+        <div class="project1">
+            <img src="code.jpg" alt="Project 1">
+            <div class="project1-item">
+                <h3>Project 1</h3>
+                <p>Description of Project 1.</p>
+            </div>
         </div>
         <section></section>
-        <div class="portfolio-item">
+
+        <div class="project2">
             <img src="project2.jpg" alt="Project 2">
             <h3>Project 2</h3>
             <p>Description of Project 2.</p>
@@ -186,7 +226,7 @@
 
         <section></section>
 
-        <div class="portfolio-item">
+        <div class="project3">
             <img src="project3.jpg" alt="Project 3">
             <h3>Project 3</h3>
             <p>Description of Project 3.</p>
@@ -194,7 +234,7 @@
 
         <section></section>
 
-        <div class="portfolio-item">
+        <div class="project4">
             <img src="project4.jpg" alt="Project 4">
             <h3>Project 4</h3>
             <p>Description of Project 4.</p>
@@ -202,7 +242,7 @@
 
         <section></section>
 
-        <div class="portfolio-item">
+        <div class="project5">
             <img src="project5.jpg" alt="Project 5">
             <h3>Project 5</h3>
             <p>Description of Project 5.</p>
@@ -210,7 +250,7 @@
 
         <section></section>
 
-        <div class="portfolio-item">
+        <div class="project6">
             <img src="project6.jpg" alt="Project 6">
             <h3>Project 6</h3>
             <p>Description of Project 6.</p>
