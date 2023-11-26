@@ -446,9 +446,15 @@
                 } else {
                     snake.pop(); // decrease size
                 }
-
             }
 
+            // when snake crashes on own body
+            function snakeCrash () {
+                const head = snake[0];
+                return snake.slice(1).includes(head);
+            }
+
+            
 
             // start the game
             function startGame(){
