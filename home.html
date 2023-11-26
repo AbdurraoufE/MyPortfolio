@@ -20,6 +20,10 @@
             text-align: center;
         }
 
+        h1 {
+            color: white; /* Set the text color to white */
+        }
+
         .mypicture{
             display: flex;
             justify-content: center;
@@ -34,25 +38,20 @@
         .aboutme-info{
             display: flex;
             justify-content: space-between;
-            align-items: left;
-            margin-top: 100px;
-        }
-
-        /* .aboutme-info-2 {
-            display: flex;
-            justify-content: space-between;
             align-items: center;
             margin-top: 100px;
-        } */
+        }
 
         .aboutme-text{
             margin-top: 20px;
             margin-left: 10px; /* Adjust the margin as needed */
             color: black;
             font-weight: bold;
-            text-align: left;
+            text-align: center;
+            font-size: large;
         }
         
+        /* usask tag */
         .aboutme-text a{
             color:rgb(47, 48, 131)!important;
         }
@@ -114,7 +113,7 @@
 <body>
     <header>
         <h1>Abdurraouf Etagiuri</h1>
-        <p>Software Developer</p>
+        <p class="softwaredev">Software Developer</p>
     </header>
 
     <nav>
@@ -128,12 +127,8 @@
         <h2>About Me</h2>
         <div class="aboutme-info">
             <img class="mypicture" src="MyImage.jpg" alt="picture">
-        <p class="aboutme-text">Hey my name is Abdurraouf, I am a 3rd year Computer Science major at the <a href="https://www.usask.ca/">University of Saskatchewan.</a> Nice to meet you!</p>
+        <p class="aboutme-text">Hey, my name is Abdurraouf <br> I am a 3rd year Computer Science major at the <a href="https://www.usask.ca/">University of Saskatchewan.</a> <br>Nice to meet you!</p>
         </div>
-        <!-- <div class="aboutme-info-2">
-            <p class="aboutme-text-2">Nice to meet you!</p>
-        </div> -->
-        
     </section>
 
     <section></section>
