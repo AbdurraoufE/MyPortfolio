@@ -139,6 +139,25 @@
             text-decoration: none;
         }
 
+        #scroll-to-the-top {
+            position: fixed;
+            bottom: 50px;
+            right: 50px;
+            display: none;
+            background-color: rgb(150, 126, 95);
+            color: white;
+            border: none;
+            border-radius: 75%;
+            width: 50px;
+            height: 50px;
+            padding: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        #scroll-to-the-top:hover {
+            background-color: rgb(105, 90, 70);
+        }
         @media screen and (max-width: 600px) {
             nav{
                 flex-direction: column;
@@ -163,8 +182,8 @@
         }
     </style>
 
-    <!-- This is for the auto smooth scroll behavior for the navbar buttons -->
     <script>
+        // This is for the auto smooth scroll behavior for the navbar buttons
         document.addEventListener("DOMContentLoaded", function () {
             // Smooth scroll for all anchor links
             document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -177,6 +196,23 @@
                 });
             });
         });
+
+        // This is for the side circle for the scroll effect to get to top of page
+        function ScrollToTop(){
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        }
+
+        window.onscroll = function(){
+            var scrollButton = document.getElementById("scroll-to-the-top");
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                scrollButton.style.display = "block";
+            } else {
+                scrollButton.style.display = "none";
+            }
+        };
     </script>
 
 </head>
@@ -306,6 +342,9 @@
     <section></section>
     <section></section>
     <section></section>
+
+    <!-- Scroll to the top button -->
+    <button id="scroll-to-the-top" onclick="ScrollToTop()">^ Top</button>
 
     <footer>
         &copy; 2024 <a class="footer-text" href="https://www.linkedin.com/in/abdurraouf/>">Abdurraouf Etagiuri</a>
