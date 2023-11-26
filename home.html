@@ -417,7 +417,31 @@
                 }
             });
 
-            
+            // move the snake around
+
+            function moveSnake() {
+                const snakeHead = snake[0];
+                let newHead;
+
+                switch(direction) {
+                    case "up":
+                        newHead = head - size < 0 ? head - size + size * size : head - size;
+                        break;
+                    case "down":
+                        newHead = (head + size) % (size * size);
+                        break;
+                    case "left":
+                        newHead = head % size === 0 ? head + size - 1 : head - 1;
+                        break;
+                    case "right":
+                        newHead = (head + 1) % size === 0 ? head - size + 1 : head + 1;
+                        break;
+                }
+                snake.unshift(newHead);
+
+                
+            }
+
 
             // start the game
             function startGame(){
