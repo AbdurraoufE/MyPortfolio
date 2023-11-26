@@ -320,11 +320,21 @@
         };
 
         function MyResume() {
+            // Option 1:
+
             // get the element ID from HTML code
-            var embeded = document.getElementById("embed-container");
+            //var embeded = document.getElementById("embed-container");
 
             // HTML to open embeded PDF
-            embeded.innerHTML = '<embed src="resume.pdf" width="800px" height="1000px" />';
+            //embeded.innerHTML = '<embed src="resume.pdf" width="800px" height="1000px" />';
+
+            // Option 2:
+            
+            // get the PDF name
+            var pdfName = 'resume.pdf';
+            
+            // opens PDF in new window
+            window.open(pdfName, '_blank');
         }
     </script>
 
