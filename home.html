@@ -475,13 +475,19 @@
                 startGame();
             }
 
-            
-            
-
-
             // start the game
             function startGame(){
-                addSnake();
+                // create the board to appear on screen
+                for (let row = 0; row < size; row++){
+                    for (let col = 0; col < size; col++){
+                        const cell = document.createElement('div');
+                        cell.classList.add('cell');
+                        cells.push(cell);
+                        board.appendChild(cell);
+                    }
+                }
+                startGame();
+                updateGame();
             }
 
             startGame();
