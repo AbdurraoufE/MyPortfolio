@@ -11,6 +11,7 @@
             padding: 0;
             box-sizing: border-box;
             background-color: rgb(158, 156, 156);
+            scroll-behavior: smooth;
         }
 
         header {
@@ -109,6 +110,23 @@
             padding: 10px;
         }
     </style>
+
+    <!-- This is for the auto smooth scroll behavior for the navbar buttons -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            // Smooth scroll for all anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+
+                    document.querySelector(this.getAttribute('href')).scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        });
+    </script>
+    
 </head>
 <body>
     <header>
