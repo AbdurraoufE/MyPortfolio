@@ -199,20 +199,28 @@
         .contact-buttons {
             display: flex;
             justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
             max-width: 800px;
             margin: 20px auto;
         }
 
-        .resume-button, .linkedin-button, .email-button, .github-button {
+        .resume-image, .linkedin-image, .email-image, .github-image {
             text-align: center;
+            margin-bottom: 10px;
+            flex: 1;
         }
 
-        .resume-button img, .linkedin-button img, .email-button img, .github-button img {
-            max-width: 50px;
+        .resume-image img, .linkedin-image img, .email-image img, .github-image img {
+            max-width: 100px;
             margin-bottom: 10px;
         }
 
-        .resume-button button, .linkedin-button button, .email-button button, .github-button button {
+        .resume-image, .linkedin-image, .email-image {
+        margin-right: 20px; 
+        }
+
+        .resume-image button, .linkedin-image button, .email-image button, .github-image button {
             background-color: #007bff;
             color: white;
             border: none;
@@ -222,7 +230,7 @@
             transition: background-color 0.3s;
         }
 
-        .resume-button button:hover, .linkedin-button button:hover, .email-button button:hover, .github-button button:hover {
+        .resume-image button:hover, .linkedin-image button:hover, .email-image button:hover, .github-image button:hover {
             background-color: #0056b3;
         }
 
@@ -455,28 +463,28 @@
         <section></section>
         <div class="contact-buttons">
             <!-- Resume button -->
-            <div class="contact-resume">
+            <div class="resume-image">
                 <img src="resume.png" alt="Resume Icon">
                 <button onclick="window.location.href = 'http://localhost'">My Resume</button>
             </div>
             <!-- LinkedIn button -->
-            <div class="linkedin-resume">
+            <div class="linkedin-image">
                 <img src="linkedin.png" alt="LinkedIn Icon">
                 <button onclick="window.location.href = 'http://localhost'">My LinkedIn</button>
             </div>
             <!-- Email button -->
-            <div class="email-resume">
+            <div class="email-image">
                 <img src="email.png" alt="Email Icon">
                 <button onclick="window.location.href = 'http://localhost'">My Email</button>
             </div>
             <!-- GitHub button -->
-            <div class="github-resume">
+            <div class="github-image">
                 <img src="github.png" alt="GitHub Icon">
                 <button onclick="window.location.href = 'http://localhost'">My GitHub</button>
             </div>
         </div>
-        <p class="ptagtextcolor">Email: Roofa.Etagiuri1@gmail.com</p>
-        <p class="ptagtextcolor">LinkedIn: linkedin.com/in/abdurraouf/</p>
+        <!-- <p class="ptagtextcolor">Email: Roofa.Etagiuri1@gmail.com</p>
+        <p class="ptagtextcolor">LinkedIn: linkedin.com/in/abdurraouf/</p> -->
     </section>
 
     <section></section>
