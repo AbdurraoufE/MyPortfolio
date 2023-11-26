@@ -106,30 +106,45 @@
         #projects{
             background-color: rgb(152,152,152);
             padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
 
         .project1, .project2, .project3, .project4, .project5, .project6 {
             display: flex;
+            flex-wrap: wrap;
             align-items: center;
-            justify-content: center;
-            margin-bottom: 20px;
+            max-width: 600px; /*fix as needed*/
+            margin-bottom: 20px; /* Add margin for spacing between project items */
         }
 
         .project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img {
-            max-width: 100%; /* Adjust as needed */
+            max-width: 100%;
             border-radius: 10px;
-            margin-bottom: 10px;
+            /* margin-right: 20px; */
+            margin: auto;
+            margin-bottom: 20px; /* Add margin for spacing between project items */
         }
         
         .project1-item, .project2-item, .project3-item, .project4-item, .project5-item, .project6-item {
+            /* max-width: 100%; */
+            /* text-align: center; */
+            /* margin-top: 10px; */
             max-width: 100%;
-            text-align: center;
-            margin-top: 10px;
+            border-radius: 10px;
+            margin-right: 20px;
         }
 
-        .project1-buttons{
-            display: flex;
-            justify-content: space-around;
+        /* .project1-item img, .project2-item img, .project3-item img, .project4-item img, .project5-item img, .project6-item img {
+            max-width: 100%;
+            border-radius: 10px;
+            margin-right: 20px;
+            margin-bottom: 20px; /* Add margin to the bottom for spacing */
+
+        .project-buttons{
+            /* display: flex; */
+            /* justify-content: space-around; */
             margin-top: 10px;
         }
 
@@ -282,8 +297,8 @@
             <img src="code.jpg" alt="Project 1">
             <div class="project1-item">
                 <h3>Project 1</h3>
-                <p>Description of Project 1.</p>
-                <div class="project1-buttons">
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo. Quisque sit amet est et sapien ullamcorper pharetra. Vestibulum erat wisi, condimentum sed, commodo vitae, ornare sit amet, wisi. Aenean fermentum, elit eget tincidunt condimentum, eros ipsum rutrum orci, sagittis tempus lacus enim ac dui. Donec non enim in turpis pulvinar facilisis. Ut felis. Praesent dapibus, neque id cursus faucibus, tortor neque egestas augue, eu vulputate magna eros eu erat. Aliquam erat volutpat. Nam dui mi, tincidunt quis, accumsan porttitor, facilisis luctus, metus</p>
+                <div class="project-buttons">
                     <button class="button github-button" onclick="window.location.href='https://github.com/your-github-repo'">Github</button>
                     <button class="button demo-button" onclick="window.location.href='https://your-demo-url'">Demo</button>
                 </div>
@@ -295,7 +310,11 @@
             <img src="code.jpg" alt="Project 2">
             <div class="project2-item">
                 <h3>Project 2</h3>
-                <p>Description of Project 2.</p>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <div class="project-buttons">
+                    <button class="button github-button" onclick="window.location.href='https://github.com/your-github-repo'">Github</button>
+                    <button class="button demo-button" onclick="window.location.href='https://your-demo-url'">Demo</button>
+                </div>
             </div>
         </div>
 
@@ -305,7 +324,11 @@
             <img src="code.jpg" alt="Project 3">
             <div class="project3-item">
                 <h3>Project 3</h3>
-                <p>Description of Project 3.</p>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vestibulum tortor quam, feugiat vitae, ultricies eget, tempor sit amet, ante. Donec eu libero sit amet quam egestas semper. Aenean ultricies mi vitae est. Mauris placerat eleifend leo.</p>
+                <div class="project-buttons">
+                    <button class="button github-button" onclick="window.location.href='https://github.com/your-github-repo'">Github</button>
+                    <button class="button demo-button" onclick="window.location.href='https://your-demo-url'">Demo</button>
+                </div>
             </div>
         </div>
 
@@ -315,7 +338,11 @@
             <img src="code.jpg" alt="Project 4">
             <div class="project4-item">
                 <h3>Project 4</h3>
-                <p>Description of Project 4.</p>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <div class="project-buttons">
+                    <button class="button github-button" onclick="window.location.href='https://github.com/your-github-repo'">Github</button>
+                    <button class="button demo-button" onclick="window.location.href='https://your-demo-url'">Demo</button>
+                </div>
             </div>
         </div>
 
@@ -325,7 +352,11 @@
             <img src="code.jpg" alt="Project 5">
             <div class="project5-item">
                 <h3>Project 5</h3>
-                <p>Description of Project 5.</p>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <div class="project-buttons">
+                    <button class="button github-button" onclick="window.location.href='https://github.com/your-github-repo'">Github</button>
+                    <button class="button demo-button" onclick="window.location.href='https://your-demo-url'">Demo</button>
+                </div>
             </div>
         </div>
 
@@ -335,7 +366,11 @@
             <img src="code.jpg" alt="Project 6">
             <div class="project6-item">
                 <h3>Project 6</h3>
-                <p>Description of Project 6.</p>
+                <p>Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+                <div class="project-buttons">
+                    <button class="button github-button" onclick="window.location.href='https://github.com/your-github-repo'">Github</button>
+                    <button class="button demo-button" onclick="window.location.href='https://your-demo-url'">Demo</button>
+                </div>
             </div>
         </div>
 
