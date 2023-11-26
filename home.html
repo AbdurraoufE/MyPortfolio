@@ -367,6 +367,15 @@
             const board = document.getElementById("game-board");
             const size = 10;
             const cells = [];
+            // the snake
+            let snake = [55];
+            let direction = "right";
+            let appleIndex = addApple();
+
+            // add an apple to the index
+            function addApple() {
+                return Math.floor(Math.random() * size * size);
+            }
 
             // the board game
             for (let row = 0; row < size; row++) {
@@ -378,18 +387,37 @@
                 }
             }
 
-            // the snake
-            let snake = [55];
-
             // add the snake to the board
             function addSnake() {
                 cells.forEach((cell, index) => {
-                    cell.classList.remove('snake');
+                    cell.classList.remove('snake', 'apple');
                     if (snake.includes(index)){
                         cell.classList.add('snake');
                     }
+                    if (index === appleIndex){
+                        cell.classList.add('apple');
+                    }
                 });
             }
+
+            document.addEventListener('keydown', (event) => {
+                switch(event.key){
+                    case "ArrowUp":
+                        direction: "up";
+                        break;
+                    case "ArrowDown":
+                        direction: "down";
+                        break;
+                    case "ArrowRight":
+                        direction: "right";
+                        break;
+                    case "ArrowLeft":
+                        direction: "left";
+                        break;
+                }
+            });
+
+            
 
             // start the game
             function startGame(){
