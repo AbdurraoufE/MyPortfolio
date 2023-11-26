@@ -467,6 +467,15 @@
                 setTimeout(updateGame, 300); // game speed in milliseconds
             }
 
+            // reset the game
+            function resetGame() {
+                snake = [55];
+                direction = "right";
+                appleIndex = addApple();
+                startGame();
+            }
+
+            
             
 
 
