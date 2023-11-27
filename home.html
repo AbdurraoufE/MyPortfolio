@@ -241,6 +241,52 @@
             background-color: #0056b3;
         }
 
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1;
+            padding-top: 50px;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgb(0, 0, 0);
+            background-color: rgba(0, 0, 0, 0.9);
+        }
+
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 80%;
+            max-height: 80%;
+        }
+
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+
+        .close:hover, .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .project1 img {
+            cursor: pointer;
+            transition: 0.3s; /* Add a smooth transition effect if you like */
+        }
+
+        .project1 img:hover {
+            opacity: 0.7; /* You can also add a hover effect if desired */
+        }
+
         footer {
             background-color: #333;
             color: white;
@@ -343,6 +389,40 @@
             // opens PDF in new window
             window.open(pdfName, '_blank');
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+        const modal = document.getElementById('myModal');
+        const modalImage = document.getElementById('modalImage');
+
+        function openModal(imagePath) {
+            modal.style.display = 'block';
+            modalImage.src = imagePath;
+        }
+
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Close the modal when clicking outside the image
+        window.onclick = function (event) {
+            window.addEventListener('click', (event) => {
+                if (event.target === modal || event.target.classList.contains('close')) {
+                closeModal();
+            }
+        }
+        )};
+
+        // Attach click event handlers to all project containers
+        const projectContainers = document.querySelectorAll('.project1, .project2, .project3, .project4, .project5, .project6');
+        projectContainers.forEach(container => {
+            container.addEventListener('click', () => {
+                const imagePath = container.getAttribute('data-image');
+                openModal(imagePath);
+            });
+        });
+    });
+
+
     </script>
 
 </head>
@@ -377,7 +457,7 @@
         <h2>Projects</h2>
         <section></section>
 
-        <div class="project1">
+        <div class="project1" data-image="project1.png">
             <img src="project1.png" alt="Project 1">
             <div class="project1-item">
                 <h3>ChillChat - Real Time Chat</h3>
@@ -398,7 +478,7 @@
         </div>
         <section></section>
 
-        <div class="project2">
+        <div class="project2" data-image="code.png">
             <img src="code.jpg" alt="Project 2">
             <div class="project2-item">
                 <h3>Project 2</h3>
@@ -412,7 +492,7 @@
 
         <section></section>
 
-        <div class="project3">
+        <div class="project3" data-image="code.png">
             <img src="code.jpg" alt="Project 3">
             <div class="project3-item">
                 <h3>Project 3</h3>
@@ -426,7 +506,7 @@
 
         <section></section>
 
-        <div class="project4">
+        <div class="project4" data-image="code.png">
             <img src="code.jpg" alt="Project 4">
             <div class="project4-item">
                 <h3>Project 4</h3>
@@ -440,7 +520,7 @@
 
         <section></section>
 
-        <div class="project5">
+        <div class="project5" data-image="code.png">
             <img src="code.jpg" alt="Project 5">
             <div class="project5-item">
                 <h3>Project 5</h3>
@@ -454,7 +534,7 @@
 
         <section></section>
 
-        <div class="project6">
+        <div class="project6" data-image="code.png">
             <img src="code.jpg" alt="Project 6">
             <div class="project6-item">
                 <h3>Project 6</h3>
@@ -465,7 +545,7 @@
                 </div>
             </div>
         </div>
-
+        
     <section></section>
     <section></section>
     <section></section>
@@ -481,6 +561,12 @@
                 <p class="ptagtextcolor">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
             </div>
         </div>
+
+    <div id="myModal" class="modal" onclick="closeModal()">
+        <span class="close" onclick="closeModal()">&times;</span>
+        <img class="modal-content" id="modalImage">
+    </div>
+
     </section>
 
     </section>
