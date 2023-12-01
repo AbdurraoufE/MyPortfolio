@@ -415,24 +415,24 @@
             modal.style.display = 'none';
         }
 
-        // Close the modal when clicking outside the image
+        // Close the modal when clicking outside the image or on the close button
         window.onclick = function (event) {
-            window.addEventListener('click', (event) => {
-                if (event.target === modal || event.target.classList.contains('close')) {
+            if (event.target === modal || event.target.classList.contains('close')) {
                 closeModal();
             }
-        }
-        )};
+        };
 
-        // Attach click event handlers to all project containers
-        const projectContainers = document.querySelectorAll('.project1, .project2, .project3, .project4, .project5, .project6');
-        projectContainers.forEach(container => {
-            container.addEventListener('click', () => {
-                const imagePath = container.getAttribute('data-image');
+        // Attach click event handlers to all project images
+        const projectImages = document.querySelectorAll('.project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img');
+        
+        projectImages.forEach(image => {
+            image.addEventListener('click', () => {
+                const imagePath = image.parentNode.getAttribute('data-image');
                 openModal(imagePath);
             });
         });
     });
+
 
 
     </script>
