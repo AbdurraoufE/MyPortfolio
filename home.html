@@ -147,6 +147,18 @@
             margin-right: 20px;
         }
 
+        .features ul {
+            padding-inline-start: 0;
+            display: flex;
+            flex-wrap: wrap;
+            list-style: none;
+            justify-content: space-between;
+        }
+
+        .features ul li {
+            flex-basis: calc(50% - 10px); /* Adjust the width and margin as needed */
+            margin-bottom: 10px;
+        }
         .experience1 {
             display: flex;
             flex-wrap: wrap;
@@ -463,13 +475,15 @@
                 <h3>ChillChat - Real Time Chat</h3>
                 <p class="ptagtextcolor">With ChillChat, users are admitted to a landing page, followed by a signup or login page that introduces users to a real time chat. This is a full
                     stack application that has normal accounts, and an admin account
-                    Features:
-                        - Sign up & Log in page
-                        - Admin account for moderation
-                        - Search Feature
-                        - Create a channel & Delete it
-                        - Real time messages
-                        -  </p>
+                </p>
+                <b>Features:</b>
+                <ul class="features">
+                    <li>Sign up & Log in page</li>
+                    <li>Admin account for moderation</li>
+                    <li>Search Feature</li>
+                    <li>Create a channel & Delete it</li>
+                    <li>Real time messages</li>
+                </ul>
                 <div class="project-buttons">
                     <button class="button github-button" onclick="window.location.href='https://github.com/AbdurraoufE/Messaging-Application'">GitHub</button>
                     <button class="button demo-button" onclick="window.location.href='https://www.youtube.com/watch?v=kFuWXNQnXHA'">Demo</button>
