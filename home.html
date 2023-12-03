@@ -290,12 +290,12 @@
             cursor: pointer;
         }
 
-        .project1 img {
+        .project1 img, .project2 img  {
             cursor: pointer;
             transition: 0.3s; /* Add a smooth transition effect if you like */
         }
 
-        .project1 img:hover {
+        .project1 img:hover, .project2 img:hover{
             opacity: 0.7; /* You can also add a hover effect if desired */
         }
 
@@ -422,16 +422,17 @@
             }
         };
 
-        // Attach click event handlers to all project images
-        const projectImages = document.querySelectorAll('.project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img');
-        
-        projectImages.forEach(image => {
-            image.addEventListener('click', () => {
-                const imagePath = image.parentNode.getAttribute('data-image');
+        // Attach click event handlers to all project containers
+        const projectContainers = document.querySelectorAll('.project1, .project2, .project3, .project4, .project5, .project6');
+
+        projectContainers.forEach(container => {
+            container.addEventListener('click', () => {
+                const imagePath = container.querySelector('img').src;
                 openModal(imagePath);
             });
         });
     });
+
 
 
 
@@ -454,7 +455,7 @@
     <section id="about">
         <h2>About Me</h2>
         <div class="aboutme-info">
-            <img class="mypicture" src="MyImage.jpg" alt="picture">
+            <img class="mypicture" src="\pictures\MyImage.jpg" alt="picture">
             <div class="aboutme-paragraph">
                 <p class="aboutme-text">Hey, my name is Abdurraouf <br> I am a 3rd year Computer Science major at the <a href="https://www.usask.ca/">University of Saskatchewan.</a> <br>Nice to meet you!</p>
             </div>
@@ -469,8 +470,8 @@
         <h2>Projects</h2>
         <section></section>
 
-        <div class="project1" data-image="project1.png">
-            <img src="project1.png" alt="Project 1">
+        <div class="project1" data-image="\pictures\project1.jpg">
+            <img src="\pictures\project1.png" alt="Project 1">
             <div class="project1-item">
                 <h3>ChillChat - Real Time Chat</h3>
                 <p class="ptagtextcolor">With ChillChat, users are admitted to a landing page, followed by a signup or login page that introduces users to a real time chat. This is a full
@@ -493,7 +494,7 @@
         <section></section>
 
         <div class="project2" data-image="LMS.png">
-            <img src="LMS.jpg" alt="Project 2">
+            <img src="\pictures\LMS.png" alt="Project 2">
             <div class="project2-item">
                 <h3>Library Management System</h3>
                 <p class="ptagtextcolor">Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
