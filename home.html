@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.css">
     <style>
         header {
-            background-color: rgb(152,152,152);
+            background-color: rgb(150, 121, 105);
             color: white;
-            padding: 10px 20px; /* Adjusted padding */
+            padding: 10px 20px; 
             text-align: center;
         }
 
@@ -18,12 +18,13 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: rgb(152,152,152);
+            background-color: rgb(150, 121, 105);
+            scroll-behavior: smooth;
             scroll-behavior: smooth;
         }
 
         h1 {
-            color: white; /* Set the text color to white */
+            color: white;
         }
 
         .mypicture{
@@ -31,8 +32,8 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 100%; /* Adjust the width as needed */
-            max-width: 400px; /* Adjust the max-width as needed */
+            width: 100%; /* Adjust the width */
+            max-width: 400px; /* Adjust the max-width */
             margin: 0 auto; /* Center horizontally */
             border-radius: 10px;
         }
@@ -46,7 +47,7 @@
 
         .aboutme-text{
             margin-top: 20px;
-            margin-left: 10px; /* Adjust the margin as needed */
+            margin-left: 10px; 
             color: black;
             font-weight: bold;
             text-align: center;
@@ -64,32 +65,32 @@
         
         .aboutme-text-2 {
             margin-top: 20px;
-            margin-left: 0px; /* Adjust the margin as needed */
+            margin-left: 0px; 
             color: black;
             font-weight: bold;
             text-align: center;
         }
 
         .aboutme-resume button {
-            font-size: 18px; /* Adjust the font size as needed */
-            padding: 12px 20px; /* Adjust the padding as needed */
-            background-color: #007bff;
+            font-size: 18px; 
+            padding: 12px 20px; 
+            background-color: rgb(74, 4, 4);
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.4s;
         }
 
         .aboutme-resume button:hover {
-            background-color: #0056b3;
+            background-color: rgb(124, 97, 82);
         }
 
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: #333;
+            background-color: rgb(74, 4, 4);
             padding: 10px;
         }
 
@@ -99,11 +100,11 @@
             padding: 10px 20px;
             margin: 0 10px;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            transition: background-color 0.4s;
         }
 
         nav a:hover {
-            background-color: #555;
+            background-color: rgb(150, 121, 105);
         }
 
         section {
@@ -113,7 +114,7 @@
 
         h1 {
             color: #333;
-            margin-bottom: 10px; /* Optional: Adjusted margin */
+            margin-bottom: 10px; /* Adjusted margin */
         }
 
         p {
@@ -131,7 +132,7 @@
         }
 
         #projects{
-            background-color: rgb(152,152,152);
+            background-color: rgb(150, 121, 105);
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -142,8 +143,8 @@
             display: flex;
             flex-wrap: wrap;
             align-items: center;
-            max-width: 600px; /*fix as needed*/
-            margin-bottom: 20px; /* Add margin for spacing between project items */
+            max-width: 600px; 
+            margin-bottom: 20px; /* margin for spacing between project items */
         }
 
         .project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img {
@@ -151,7 +152,7 @@
             border-radius: 10px;
             /* margin-right: 20px; */
             margin: auto;
-            margin-bottom: 20px; /* Add margin for spacing between project items */
+            margin-bottom: 20px; /* margin for spacing between project items */
         }
         
         .project1-item, .project2-item, .project3-item, .project4-item, .project5-item, .project6-item {
@@ -224,7 +225,7 @@
         }
 
         .features ul li {
-            flex-basis: calc(50% - 10px); /* Adjust the width and margin as needed */
+            flex-basis: calc(50% - 10px); 
             margin-bottom: 10px;
         }
         .experience1 {
@@ -262,7 +263,7 @@
             border-radius: 5px;
             padding: 8px 15px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.4s;
         }
 
         .github-button {
@@ -270,12 +271,12 @@
         }
 
         .github-button:hover {
-            background-color: #2b5888;
+            background-color: #4782c2;
         }
 
         .demo-button {
-            /* Add styling for the demo button */
-            background-color: #317934; /* Green color, replace with your color */
+            /* styling for the demo button */
+            background-color: #317934;
         }
         
         .demo-button:hover{
@@ -308,31 +309,32 @@
         }
 
         .experience1-image button {
-            background-color: rgb(70, 88, 179);
+            background-color: rgb(74, 4, 4);
             color: white;
             padding: 12px 20px;
             font-size: 16px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            transition: background-color 0.4s;
         }
 
         .experience1-image button:hover {
-            background-color: #0056b3;
+            background-color: rgb(124, 97, 82);
         }
 
         .resume-image button, .linkedin-image button, .email-image button, .github-image button {
-            background-color: #007bff;
+            background-color: rgb(74, 4, 4);
             color: white;
             border: none;
             border-radius: 5px;
             padding: 8px 15px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.4s;
         }
 
         .resume-image button:hover, .linkedin-image button:hover, .email-image button:hover, .github-image button:hover {
-            background-color: #0056b3;
+            background-color: rgb(124, 97, 82);
         }
 
         .modal {
@@ -374,11 +376,11 @@
 
         .project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img  {
             cursor: pointer;
-            transition: 0.3s; /* Add a smooth transition effect if you like */
+            transition: 0.3s; 
         }
 
         .project1 img:hover, .project2 img:hover, .project3 img:hover, .project4 img:hover, .project5 img:hover, .project6 img:hover{
-            opacity: 0.7; /* You can also add a hover effect if desired */
+            opacity: 0.7; 
         }
 
         footer {
@@ -400,7 +402,7 @@
             bottom: 50px;
             right: 25px;
             display: none;
-            background-color: rgb(150, 126, 95);
+            background-color: rgb(196, 164, 132);
             color: white;
             border: none;
             border-radius: 75%;
@@ -408,7 +410,7 @@
             height: 50px;
             padding: 10px;
             cursor: pointer;
-            transition: background-color 0.3s;
+            transition: background-color 0.4s;
         }
 
         #scroll-to-the-top:hover {
@@ -445,12 +447,12 @@
         .project4 img,
         .experience1 img,
         .contact-buttons img {
-            width: 100%; /* Adjust the width as needed */
-            max-width: 300px; /* Adjust the max-width as needed */
+            width: 100%; 
+            max-width: 300px; 
         }
 
         .aboutme-paragraph {
-            margin-left: 0; /* Reset the left margin */
+            margin-left: 0; 
         }
 
         .aboutme-text,
@@ -465,17 +467,17 @@
         .email-image,
         .github-image {
             text-align: center;
-            margin-right: 0; /* Reset the right margin */
+            margin-right: 0;
         }
 
         .aboutme-text {
-            text-align: left; /* Adjust the text alignment */
+            text-align: left; 
         }
 
         .project-buttons,
         .experience1-image,
         .contact-buttons {
-            margin-top: 20px; /* Add margin for spacing */
+            margin-top: 20px; /* add margin for spacing */
         }
 
         .project1,
@@ -485,7 +487,7 @@
         .project-container3,
         .experience1,
         .contact-buttons {
-            margin-bottom: 20px; /* Add margin for spacing between sections */
+            margin-bottom: 20px; /* margin for spacing between sections */
         }
     }
 
@@ -508,7 +510,7 @@
             });
         });
 
-        // This is for the side circle for the scroll effect to get to top of page
+        // side circle for the scroll effect to get to top of page
         function ScrollToTop(){
             window.scrollTo({
                 top: 0,
