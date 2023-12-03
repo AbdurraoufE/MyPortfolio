@@ -70,6 +70,22 @@
             text-align: center;
         }
 
+        .aboutme-resume button {
+            font-size: 18px; /* Adjust the font size as needed */
+            padding: 12px 20px; /* Adjust the padding as needed */
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .aboutme-resume button:hover {
+            background-color: #0056b3;
+        }
+
+
         nav {
             display: flex;
             justify-content: center;
@@ -526,7 +542,11 @@
         <div class="aboutme-info">
             <img class="mypicture" src="\pictures\MyImage.jpg" alt="picture">
             <div class="aboutme-paragraph">
-                <p class="aboutme-text">Hey, my name is Abdurraouf <br> I am a 3rd year Computer Science major at the <a href="https://www.usask.ca/">University of Saskatchewan.</a> <br>Nice to meet you!</p>
+                <p class="aboutme-text">Hey, my name is Abdurraouf <br> I am a 3rd year Computer Science major at the 
+                    <a href="https://www.usask.ca/">University of Saskatchewan.</a> <br>Nice to meet you!</p>
+                    <div class="aboutme-resume" id="embed-container">
+                        <button onclick="MyResume()">My Resume</button>
+                    </div>
             </div>
         </div>
     </section>
