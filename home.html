@@ -415,23 +415,80 @@
             background-color: rgb(105, 90, 70);
         }
         @media screen and (max-width: 600px) {
-            nav{
-                flex-direction: column;
-                align-items: center;
-                width: 100vw;
-            }
-            nav a{
-                margin: 5px 0;
-            }
-            .project1, .project2, .project3, .project4, .project5, .project6 {
-                flex-direction: column;
-            }
-
-            .project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img {
-                /* max-width: 100%; */
-                margin-bottom: 10px;
-            }          
+        nav {
+            flex-direction: column;
+            align-items: center;
+            width: 100vw;
         }
+
+        nav a {
+            margin: 5px 0;
+        }
+
+        .aboutme-info,
+        .project1,
+        .project2,
+        .project3,
+        .project4,
+        .project-container3,
+        .experience1,
+        .contact-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .aboutme-info img,
+        .project1 img,
+        .project2 img,
+        .project3 .image,
+        .project3 .gif,
+        .project4 img,
+        .experience1 img,
+        .contact-buttons img {
+            width: 100%; /* Adjust the width as needed */
+            max-width: 300px; /* Adjust the max-width as needed */
+        }
+
+        .aboutme-paragraph {
+            margin-left: 0; /* Reset the left margin */
+        }
+
+        .aboutme-text,
+        .aboutme-text-2,
+        .project1-item,
+        .project2-item,
+        .project3-info,
+        .project4-item,
+        .experince1-imgage,
+        .resume-image,
+        .linkedin-image,
+        .email-image,
+        .github-image {
+            text-align: center;
+            margin-right: 0; /* Reset the right margin */
+        }
+
+        .aboutme-text {
+            text-align: left; /* Adjust the text alignment */
+        }
+
+        .project-buttons,
+        .experience1-image,
+        .contact-buttons {
+            margin-top: 20px; /* Add margin for spacing */
+        }
+
+        .project1,
+        .project2,
+        .project3,
+        .project4,
+        .project-container3,
+        .experience1,
+        .contact-buttons {
+            margin-bottom: 20px; /* Add margin for spacing between sections */
+        }
+    }
+
     </style>
 
 <script src="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.js"></script>
