@@ -290,12 +290,12 @@
             cursor: pointer;
         }
 
-        .project1 img, .project2 img  {
+        .project1 img, .project2 img, .project3 img, .project4 img, .project5 img, .project6 img  {
             cursor: pointer;
             transition: 0.3s; /* Add a smooth transition effect if you like */
         }
 
-        .project1 img:hover, .project2 img:hover{
+        .project1 img:hover, .project2 img:hover, .project3 img:hover, .project4 img:hover, .project5 img:hover, .project6 img:hover{
             opacity: 0.7; /* You can also add a hover effect if desired */
         }
 
@@ -403,8 +403,8 @@
         }
 
         document.addEventListener("DOMContentLoaded", () => {
-        const modal = document.getElementById('myModal');
-        const modalImage = document.getElementById('modalImage');
+            const modal = document.getElementById('myModal');
+            const modalImage = document.getElementById('modalImage');
 
         function openModal(imagePath) {
             modal.style.display = 'block';
@@ -426,15 +426,16 @@
         const projectContainers = document.querySelectorAll('.project1, .project2, .project3, .project4, .project5, .project6');
 
         projectContainers.forEach(container => {
-            container.addEventListener('click', () => {
-                const imagePath = container.querySelector('img').src;
-                openModal(imagePath);
+            container.addEventListener('click', (event) => {
+                // Check if the clicked element is an image
+                if (event.target.tagName.toLowerCase() === 'img') {
+                    // Retrieve the image path from the clicked image
+                    const imagePath = event.target.src;
+                    openModal(imagePath);
+                }
             });
         });
     });
-
-
-
 
     </script>
 
@@ -470,8 +471,8 @@
         <h2>Projects</h2>
         <section></section>
 
-        <div class="project1" data-image="project1.jpg">
-            <img src="\pictures\project1.png" alt="Project 1">
+        <div class="project1" data-image="ChillChat.jpg">
+            <img src="\pictures\ChillChat.png" alt="Project 1">
             <div class="project1-item">
                 <h3>ChillChat - Real Time Chat</h3>
                 <p class="ptagtextcolor">With ChillChat, users are admitted to a landing page, followed by a signup or login page that introduces users to a real time chat. This is a full
