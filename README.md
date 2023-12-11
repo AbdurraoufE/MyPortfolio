@@ -1,1 +1,1 @@
-## This portfolio uses HTML, CSS and JavaScript !
+## This portfolio uses HTML, CSS and JavaScript
