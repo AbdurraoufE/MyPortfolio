@@ -7,14 +7,20 @@
     <link rel="stylesheet" href="https://unpkg.com/simplebar@5.3.0/dist/simplebar.min.css">
     <style>
         header {
-            background-color: rgb(150, 121, 105);
+            background-color: rgb(10, 25, 47);
             color: white;
             padding: 10px 20px; 
             text-align: center;
         }
+        
+        .softwaredev {
+            font-size: large;
+            font-weight: bolder;
+            color: rgb(255, 255, 255);
+        }
 
         header h1 {
-            color: black;
+            color: rgb(255, 255, 255);
         }
 
         body, html {
@@ -26,10 +32,10 @@
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            background-color: rgb(150, 121, 105);
+            background-color: rgb(10, 25, 47);
             scroll-behavior: smooth;
             scrollbar-width: thin;
-            scrollbar-color: rgb(74, 4, 4) white;
+            scrollbar-color: rgb(100, 255, 218) white;
         }
 
         body::-webkit-scrollbar {
@@ -37,12 +43,12 @@
         }
 
         body::-webkit-scrollbar-thumb {
-            background-color: rgb(74, 4, 4);
+            background-color: rgb(100, 255, 218);
             border-radius: 5px;
         }
 
         body::-webkit-scrollbar-track {
-            background-color: rgb(150, 121, 105);
+            background-color: rgb(10, 25, 47);
         }
 
         h1 {
@@ -70,7 +76,7 @@
         .aboutme-text{
             margin-top: 20px;
             margin-left: 10px; 
-            color: black;
+            color: rgb(255, 255, 255);
             font-weight: bold;
             text-align: center;
             font-size: large;
@@ -78,7 +84,7 @@
         
         /* usask tag */
         .aboutme-text a{
-            color:rgb(74, 4, 4)!important;
+            color:rgb(100, 255, 218)!important;
         }
 
         .aboutme-paragraph {
@@ -88,7 +94,7 @@
         .aboutme-text-2 {
             margin-top: 20px;
             margin-left: 0px; 
-            color: black;
+            color: rgb(255, 255, 255);
             font-weight: bold;
             text-align: center;
         }
@@ -96,7 +102,7 @@
         .aboutme-resume button {
             font-size: 18px; 
             padding: 12px 20px; 
-            background-color: rgb(74, 4, 4);
+            background-color: rgb(15, 54, 88);
             color: white;
             border: none;
             border-radius: 5px;
@@ -105,14 +111,14 @@
         }
 
         .aboutme-resume button:hover {
-            background-color: rgb(124, 97, 82);
+            background-color: rgb(53, 153, 130);
         }
 
 
         nav {
             display: flex;
             justify-content: center;
-            background-color: rgb(74, 4, 4);
+            background-color: rgb(10, 25, 47);
             padding: 10px;
         }
 
@@ -126,7 +132,7 @@
         }
 
         nav a:hover {
-            background-color: rgb(150, 121, 105);
+            background-color: rgb(10, 25, 47);
         }
 
         section {
@@ -135,18 +141,12 @@
         }
 
         h1 {
-            color: #333;
+            color: #ffffff;
             margin-bottom: 10px; /* Adjusted margin */
         }
 
         p {
-            color: #666;
-        }
-
-        .softwaredev {
-            font-size: large;
-            font-weight: bolder;
-            color: black;
+            color: #ffffff;
         }
 
         .portfolio-item {
@@ -154,7 +154,7 @@
         }
 
         #projects{
-            background-color: rgb(150, 121, 105);
+            background-color: rgb(10, 25, 47);
             padding: 20px;
             display: flex;
             flex-direction: column;
@@ -244,12 +244,19 @@
             flex-wrap: wrap;
             list-style: none;
             justify-content: space-between;
+            color:#ffffff
         }
 
         .features ul li {
             flex-basis: calc(50% - 10px); 
             margin-bottom: 10px;
+            color: #fff;
         }
+
+        .features-list{
+            color:#fff;
+        }
+
         .experience1 {
             display: flex;
             flex-wrap: wrap;
@@ -276,8 +283,21 @@
         }
 
         .ptagtextcolor{
-            color:black !important;
+            color:white !important;
         }
+
+        .features-text {
+            color:#ffffff;
+        }
+
+        .Projecttitle-text{
+            color: #ffffff;
+        }
+
+        .starttitle{
+            color: #fff;
+        }
+
         .button {
             background-color: #007bff;
             color: white;
@@ -331,7 +351,7 @@
         }
 
         .experience1-image button {
-            background-color: rgb(74, 4, 4);
+            background-color: rgb(15, 54, 88);
             color: white;
             padding: 12px 20px;
             font-size: 16px;
@@ -342,11 +362,11 @@
         }
 
         .experience1-image button:hover {
-            background-color: rgb(124, 97, 82);
+            background-color: rgb(53, 153, 130);
         }
 
         .resume-image button, .linkedin-image button, .email-image button, .github-image button {
-            background-color: rgb(74, 4, 4);
+            background-color: rgb(15, 54, 88);
             color: white;
             border: none;
             border-radius: 5px;
@@ -356,7 +376,7 @@
         }
 
         .resume-image button:hover, .linkedin-image button:hover, .email-image button:hover, .github-image button:hover {
-            background-color: rgb(124, 97, 82);
+            background-color: rgb(53, 153, 130);
         }
 
         .modal {
@@ -384,14 +404,14 @@
             position: absolute;
             top: 15px;
             right: 35px;
-            color: #f1f1f1;
+            color: #ffffff;
             font-size: 40px;
             font-weight: bold;
             transition: 0.3s;
         }
 
         .close:hover, .close:focus {
-            color: #bbb;
+            color: rgb(100, 255, 218);
             text-decoration: none;
             cursor: pointer;
         }
@@ -406,7 +426,7 @@
         }
 
         footer {
-            color: rgb(74, 4, 4);
+            color: rgb(255, 255, 255);
             text-align: center;
             padding: 10px;
             text-decoration: none !important;
@@ -415,11 +435,14 @@
         }
 
         .footer-text {
-            color: rgb(74, 4, 4);
+            color: rgb(255, 255, 255);
             font: bold;
             font-size:large;
             text-decoration: underline;
+        }
 
+        .footer-text:hover{
+            color:rgb(53, 153, 130);
         }
 
         #scroll-to-the-top {
@@ -427,8 +450,8 @@
             bottom: 50px;
             right: 25px;
             display: none;
-            background-color: rgb(74, 4, 4);
-            color: white;
+            background-color: rgb(100, 255, 218);
+            color: rgb(0, 0, 0);
             border: none;
             border-radius: 75%;
             width: 50px;
@@ -439,7 +462,7 @@
         }
 
         #scroll-to-the-top:hover {
-            background-color: rgb(124, 97, 82);
+            background-color: rgb(15, 41, 80);
         }
         @media screen and (max-width: 600px) {
         nav {
@@ -622,7 +645,7 @@
     </nav>
 
     <section id="about">
-        <h2>About Me</h2>
+        <h2 class="starttitle">About Me</h2>
         <div class="aboutme-info">
             <img class="mypicture" src="\pictures\MyImage.jpg" alt="picture">
             <div class="aboutme-paragraph">
@@ -655,18 +678,18 @@
     <section></section>
 
     <section id="projects">
-        <h2>Projects</h2>
+        <h2 class="starttitle">Projects</h2>
         <section></section>
 
         <div class="project1" data-image="ChillChat.png">
             <img src="\pictures\ChillChat.png" alt="Project 1">
             <div class="project1-item">
-                <h3>ChillChat - Real Time Chat</h3>
+                <h3 class="Projecttitle-text">ChillChat - Real Time Chat</h3>
                 <p class="ptagtextcolor">With ChillChat, users are admitted to a landing page, followed by a signup or login page that introduces users to a real time chat. This is a full
                     stack application that has normal accounts, and an admin account
                 </p>
-                <b>Features:</b>
-                <ul class="features">
+                <b class="features-text">Features:</b>
+                <ul class="features-list">
                     <li>Sign up & Log in page</li>
                     <li>Search Feature</li>
                     <li>Create a channel & Delete it</li>
@@ -684,11 +707,11 @@
         <div class="project2" data-image="LMS.png">
             <img src="\pictures\LMS.png" alt="Project 2">
             <div class="project2-item">
-                <h3>Library Management System</h3>
+                <h3 class="Projecttitle-text">Library Management System</h3>
                 <p class="ptagtextcolor">A Library Management System web application that tracks usage of books and keep up with trendy books
                 </p>
-                <b>Features:</b>
-                <ul class="features">
+                <b class="features-text">Features:</b>
+                <ul class="features-list">
                     <li>Sign up & Log in page</li>
                     <li>Search Feature</li>
                     <li>Add & Remove books</li>
@@ -710,11 +733,11 @@
                 <img class="image" src="\pictures\todo.png" alt="Image">
                 <img class="gif" src="\pictures\todogif.gif" alt="GIF">
                 <div class="project3-info">
-                    <h3>To-Do Application</h3>
+                    <h3 class="Projecttitle-text">To-Do Application</h3>
                     <p class="ptagtextcolor">A To-do phone application that allows users to add and remove items from the list to never miss appointments
                     </p>
-                    <b>Features:</b>
-                    <ul class="features">
+                    <b class="features-text">Features:</b>
+                    <ul class="features-list">
                         <li>Add & Remove Todo items</li>
                         <li>Alphabetically sorts items </li>
                         <li>Check Off Todo items</li>
@@ -733,7 +756,7 @@
         <div class="project4" data-image="code.png">
             <img src="\pictures\portfolio.png" alt="portfolio.png">
             <div class="project4-item">
-                <h3>Personal Portfolio</h3>
+                <h3 class="Projecttitle-text">Personal Portfolio</h3>
                 <p class="ptagtextcolor">A personal website that talks a bit about me and what I do as a Software Engineer
                 </p>
                 <div class="project-buttons">
@@ -762,13 +785,13 @@
 
 
     <section id="experince">
-        <h2>Experience</h2>
+        <h2 class="starttitle">Experience</h2>
         <section></section>
 
         <div class="experience1">
             <img src="\pictures\experience1.jpg" alt="Experience 1">
             <div class="experince1-imgage">
-                <h3>PSI Technologies Inc</h3>
+                <h3 class="Projecttitle-text">PSI Technologies Inc</h3>
                 <p class="ptagtextcolor">Currently a Software Developer at PSI Technologies Inc. 
                     Working with C# while maintaining MVVM practices, .NET Core, and DevExpress
                 </p>
@@ -789,7 +812,7 @@
     <section></section>
 
     <section id="contact">
-        <h2>Contact Me</h2>
+        <h2 class="starttitle">Contact Me</h2>
         <section></section>
         <div class="contact-buttons">
             <!-- Resume button -->
